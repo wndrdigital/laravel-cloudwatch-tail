@@ -1,0 +1,32 @@
+{
+    "name": "wndr/laravel-cloudwatch-tail",
+    "description": "Tail Laravel log files and ship them to AWS CloudWatch Logs",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "WNDR Digital"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/console": "^11.0|^12.0",
+        "illuminate/filesystem": "^11.0|^12.0",
+        "illuminate/support": "^11.0|^12.0",
+        "aws/aws-sdk-php": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wndr\\CloudwatchTail\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wndr\\CloudwatchTail\\CloudwatchTailServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
